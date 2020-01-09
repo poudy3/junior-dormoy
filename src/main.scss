@@ -1,0 +1,199 @@
+@mixin button-couleur {
+    width: 150px;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-image:linear-gradient(-60deg, #46c2ff, #bd11fa);
+    box-shadow:
+  -5px 0 10px #bd11fa,
+    5px 0 10px #bd11fa;
+}
+$button-colour: #20202c;
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+Body{
+    background-color: #353535;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+}
+nav{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-around;
+
+}
+li, a{
+    list-style-type: none;
+    text-decoration: none;
+}
+a{
+    font-size: 20px;
+    margin-right: 35px;
+    color: grey
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.contact{
+    background-color: $button-colour;
+    height: 60px;
+    width:150px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+.one{
+    margin-top: 100px;
+    display: flex;
+}
+.link{
+    display:flex;
+    align-items: center;
+}
+.colour{
+@include button-couleur;
+}
+
+h2{
+    margin-left: 10px;
+}
+h1{
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+p{
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom: 45px;
+    color: grey;
+}
+.text{
+    height: 700px;
+    width: 450px;
+    margin-left: 250px;
+    margin-top: 250px;
+}
+.triangle{
+    position: absolute;
+    left: 750px;
+}
+.phone{
+    width: 1250px;
+
+    background-image: url(../img/drive-download-20200109T123230Z-001/Mockup.png);
+    background-size: cover;
+}
+.two{
+    display: flex;
+    flex-wrap: wrap;
+}
+.icon{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cubea, .cubeb, .cubec, .cubed, .cubee, .cubef, .cubeg, .cubeh{
+    width: 100%;
+    height: 100%;
+
+    box-shadow:
+    -5px 0 10px black,
+      5px 0 10px black; 
+}
+.cube{
+    display:block;
+    margin:auto;
+}
+.green{
+    width: 150px;
+    height: 60px;
+    border: none;
+    color: limegreen;
+    background-color: lightgreen;
+}
+.three{
+    display: flex;
+    justify-content: space-around;
+}
+.card{
+    height: 350px;
+    width: 300px;
+    margin-left: 250px;
+    margin-top: 250px;
+    box-shadow:
+      -8px 0 15px rgb(34, 34, 34),
+      8px 0 15px rgb(34, 34, 34);   
+}
+.pencil{
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    height: 75px;
+    padding-left: 15px;
+    background-color: rgb(75, 73, 73);
+  &img{
+    margin-left: 15px;
+  }
+}
+h4{
+    margin-bottom: 25px;
+}
+
+.group1{
+    display: block;
+    width: 300px;
+}
+.group2{
+    display: block;
+    width: 300px;
+}
