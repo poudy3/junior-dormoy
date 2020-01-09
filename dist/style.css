@@ -117,6 +117,10 @@ h1 {
   margin-bottom: 20px;
 }
 
+h3 {
+  margin-bottom: 15px;
+}
+
 p {
   font-size: 15px;
   line-height: 25px;
@@ -124,7 +128,7 @@ p {
   color: grey;
 }
 
-.text {
+.text, .folks {
   height: 700px;
   width: 450px;
   margin-left: 250px;
@@ -152,10 +156,22 @@ p {
   flex-wrap: wrap;
 }
 
+.group {
+  margin-top: 250px;
+  margin-left: 250px;
+  width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .cubea, .cubeb, .cubec, .cubed, .cubee, .cubef, .cubeg, .cubeh {
-  width: 100%;
-  height: 100%;
-  box-shadow: -5px 0 10px black, 5px 0 10px black;
+  display: flex;
+  align-items: center;
+  width: 250px;
+  height: 120px;
+  margin-left: 25px;
+  margin-bottom: 15px;
+  box-shadow: -8px 0 15px #222222, 8px 0 15px #222222;
 }
 
 .cube {
@@ -163,15 +179,38 @@ p {
   margin: auto;
 }
 
+.triangle1 {
+  position: absolute;
+}
+
+.folks {
+  margin-top: 300px;
+  margin-left: 30px;
+  height: 300px;
+  width: 350px;
+}
+
+.cercle {
+  position: absolute;
+  right: 20px;
+  top: 1580px;
+  object-fit: cover;
+  object-position: -20% 0;
+  width: 300px;
+  height: 337px;
+}
+
 .green {
   width: 150px;
-  height: 60px;
+  height: 50px;
   border: none;
-  color: limegreen;
-  background-color: lightgreen;
+  margin-bottom: 15px;
+  color: #00ec98;
+  background-color: #1E3639;
 }
 
 .three {
+  margin-top: 300px;
   display: flex;
   justify-content: space-around;
 }
@@ -179,19 +218,19 @@ p {
 .card {
   height: 350px;
   width: 300px;
-  margin-left: 250px;
-  margin-top: 250px;
   box-shadow: -8px 0 15px #222222, 8px 0 15px #222222;
 }
 
 .pencil {
   display: flex;
   align-items: center;
-  margin-top: 50px;
-  margin-bottom: 25px;
   height: 75px;
   padding-left: 15px;
   background-color: #4b4949;
+}
+.pencil .pencil margin {
+  top: 150px;
+  bottom: 25px;
 }
 .pencilimg {
   margin-left: 15px;
@@ -201,12 +240,7 @@ h4 {
   margin-bottom: 25px;
 }
 
-.group1 {
-  display: block;
-  width: 300px;
-}
-
-.group2 {
+.group1, .group2 {
   display: block;
   width: 300px;
 }

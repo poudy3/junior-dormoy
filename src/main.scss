@@ -9,6 +9,11 @@
   -5px 0 10px #bd11fa,
     5px 0 10px #bd11fa;
 }
+@mixin Display-flex{
+    display: flex;
+    align-items: center;
+}
+$font-color: white;
 $button-colour: #20202c;
 
 
@@ -59,7 +64,7 @@ table {
 
 Body{
     background-color: #353535;
-    color: white;
+    color: $font-color;
     font-family: 'Roboto', sans-serif;
     font-size: 25px;
 }
@@ -79,15 +84,14 @@ a{
     color: grey
 }
 .logo{
-    display: flex;
-    align-items: center;
+@include Display-flex;
 }
 .contact{
     background-color: $button-colour;
     height: 60px;
     width:150px;
     border-radius: 10px;
-    color: white;
+    color: $font-color;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
@@ -97,8 +101,7 @@ a{
     display: flex;
 }
 .link{
-    display:flex;
-    align-items: center;
+@include Display-flex()
 }
 .colour{
 @include button-couleur;
@@ -110,6 +113,9 @@ h2{
 h1{
     font-size: 45px;
     margin-bottom: 20px;
+}
+h3{
+    margin-bottom: 15px;
 }
 p{
     font-size: 15px;
@@ -141,34 +147,64 @@ p{
     display: flex;
     flex-wrap: wrap;
 }
+.group{
+    margin-top: 250px;
+    margin-left: 250px;
+    width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+}
 .cubea, .cubeb, .cubec, .cubed, .cubee, .cubef, .cubeg, .cubeh{
-    width: 100%;
-    height: 100%;
-
+    display: flex;
+    align-items: center;
+    width: 250px;
+    height: 120px;
+    margin-left: 25px;
+margin-bottom: 15px;
     box-shadow:
-    -5px 0 10px black,
-      5px 0 10px black; 
+      -8px 0 15px rgb(34, 34, 34),
+      8px 0 15px rgb(34, 34, 34); 
 }
 .cube{
     display:block;
     margin:auto;
 }
+.triangle1{
+    position: absolute;
+}
+.folks{
+    @extend .text;
+    margin-top: 300px;
+    margin-left: 30px;
+    height: 300px;
+    width: 350px;
+}
+.cercle{
+    position: absolute;
+    right: 20px;
+    top: 1580px;
+    object-fit: cover;
+    object-position: -20% 0;
+  
+    width: 300px;
+    height: 337px;
+}
 .green{
     width: 150px;
-    height: 60px;
+    height: 50px;
     border: none;
-    color: limegreen;
-    background-color: lightgreen;
+    margin-bottom: 15px;
+    color: #00ec98;
+    background-color: #1E3639;
 }
 .three{
+    margin-top: 300px;
     display: flex;
     justify-content: space-around;
 }
 .card{
     height: 350px;
     width: 300px;
-    margin-left: 250px;
-    margin-top: 250px;
     box-shadow:
       -8px 0 15px rgb(34, 34, 34),
       8px 0 15px rgb(34, 34, 34);   
@@ -176,8 +212,12 @@ p{
 .pencil{
     display: flex;
     align-items: center;
-    margin-top: 50px;
-    margin-bottom: 25px;
+    & &{
+        margin{
+            top: 150px;
+            bottom: 25px;
+        }
+    }
     height: 75px;
     padding-left: 15px;
     background-color: rgb(75, 73, 73);
@@ -194,6 +234,6 @@ h4{
     width: 300px;
 }
 .group2{
-    display: block;
-    width: 300px;
+    @extend .group1;
+
 }
